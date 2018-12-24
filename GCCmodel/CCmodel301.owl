@@ -1,0 +1,203 @@
+<rdf:RDF
+    xmlns:cs="http://www.owl-ontologies.com/Ontology1535514050.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:dm="http://www.owl-ontologies.com/AGVs.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://www.owl-ontologies.com/Ontology1512699842.owl#"
+    xmlns:swrlm="http://www.w3.org/2017/11/swrl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.owl-ontologies.com/cc.owl">
+    <owl:imports rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl"/>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="http://www.w3.org/2017/11/swrl#Atom"/>
+  <rdfs:Class rdf:about="http://www.owl-ontologies.com/AGVs.owl#Agent"/>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#Label"/>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#Capability">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#hasProcess"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#hasOutConstraints"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2017/11/swrl#Atom"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#hasInConstraints"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2017/11/swrl#Atom"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#hasActors"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/AGVs.owl#Agent"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1512699842.owl#Label"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#hasClabel"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#Commitment">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#hasConsequence"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2017/11/swrl#Atom"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#hasAntecedent"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2017/11/swrl#Atom"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1512699842.owl#Capability"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#hasDebtor"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1512699842.owl#Capability"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#hasCreditor"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#hasTriggerConditions"/>
+  <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#hasFinalStates"/>
+  <Capability rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#read_cart_tag">
+    <hasClabel>
+      <Label rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#c2"/>
+    </hasClabel>
+    <hasActors rdf:resource="http://www.owl-ontologies.com/AGVs.owl#cartSensor"/>
+    <hasOutConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs3"/>
+    <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs1"/>
+  </Capability>
+  <Capability rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#take_in_cart">
+    <hasOutConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs9"/>
+    <hasClabel>
+      <Label rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#c6"/>
+    </hasClabel>
+    <hasActors rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1"/>
+    <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs8"/>
+  </Capability>
+  <Capability rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#deliver_agv_call">
+    <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs2"/>
+    <hasClabel>
+      <Label rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#c3"/>
+    </hasClabel>
+    <hasOutConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs4"/>
+    <hasActors rdf:resource="http://www.owl-ontologies.com/AGVs.owl#cartSensor"/>
+  </Capability>
+  <Capability rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#detect_cart">
+    <hasClabel>
+      <Label rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#c1"/>
+    </hasClabel>
+    <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs1"/>
+    <hasActors rdf:resource="http://www.owl-ontologies.com/AGVs.owl#cartSensor"/>
+    <hasOutConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs2"/>
+  </Capability>
+  <Capability rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#move_to_pickup">
+    <hasOutConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs8"/>
+    <hasActors rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1"/>
+    <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs5"/>
+    <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs2"/>
+    <hasClabel>
+      <Label rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#c5"/>
+    </hasClabel>
+  </Capability>
+  <Commitment rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#move_to_elevator_transport_cart_by_elevator">
+    <hasClabel>
+      <Label rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#co"/>
+    </hasClabel>
+    <hasConsequence rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs10"/>
+    <hasAntecedent rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs9"/>
+    <hasAntecedent rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs3"/>
+    <hasAntecedent rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs13"/>
+    <hasDebtor>
+      <Capability rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#transport_cart_by_elevator">
+        <hasActors rdf:resource="http://www.owl-ontologies.com/AGVs.owl#elevator"/>
+        <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs15"/>
+        <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs16"/>
+        <hasClabel>
+          <Label rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#c10"/>
+        </hasClabel>
+        <hasOutConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs10"/>
+      </Capability>
+    </hasDebtor>
+    <hasCreditor>
+      <Capability rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#move_to_elevator">
+        <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs13"/>
+        <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs9"/>
+        <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs3"/>
+        <hasActors rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1"/>
+        <hasClabel>
+          <Label rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#c9"/>
+        </hasClabel>
+        <hasOutConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs15"/>
+        <hasOutConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs16"/>
+      </Capability>
+    </hasCreditor>
+  </Commitment>
+  <Capability rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#move_to_destination">
+    <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs9"/>
+    <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs10"/>
+    <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs3"/>
+    <hasOutConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs11"/>
+    <hasClabel>
+      <Label rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#c7"/>
+    </hasClabel>
+    <hasActors rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1"/>
+  </Capability>
+  <Capability rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#take_off_cart">
+    <hasOutConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs14"/>
+    <hasClabel>
+      <Label rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#c8"/>
+    </hasClabel>
+    <hasActors rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1"/>
+    <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs11"/>
+    <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs9"/>
+  </Capability>
+  <Capability rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#select_nearest_agv">
+    <hasClabel>
+      <Label rdf:about="http://www.owl-ontologies.com/Ontology1512699842.owl#c4"/>
+    </hasClabel>
+    <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs7"/>
+    <hasInConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs4"/>
+    <hasActors rdf:resource="http://www.owl-ontologies.com/AGVs.owl#cartSensor"/>
+    <hasOutConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs5"/>
+    <hasOutConstraints rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs6"/>
+  </Capability>
+</rdf:RDF>

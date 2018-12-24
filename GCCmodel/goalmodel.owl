@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:csmodel="http://www.owl-ontologies.com/Ontology1535514050.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:dm="http://www.owl-ontologies.com/AGVs.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://www.owl-ontologies.com/Ontology1512699842.owl#"
+    xmlns:cs="http://www.w3.org/2017/11/swrl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://www.owl-ontologies.com/Ontology1512699842.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl"/>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="http://www.w3.org/2017/11/swrl#Atom"/>
+  <rdfs:Class rdf:about="http://www.owl-ontologies.com/AGVs.owl#Agent"/>
+  <owl:Class rdf:ID="Label"/>
+  <owl:Class rdf:ID="Goal">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasActors"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/AGVs.owl#Agent"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasTriggerConditions"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2017/11/swrl#Atom"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasFinalStates"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2017/11/swrl#Atom"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoalState"/>
+  <owl:ObjectProperty rdf:ID="hasClabel">
+    <rdfs:domain rdf:resource="#Goal"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasOutConstraints"/>
+  <owl:ObjectProperty rdf:ID="hasProcess"/>
+  <owl:ObjectProperty rdf:ID="hasInConstraints"/>
+  <owl:ObjectProperty rdf:ID="hasDebtor"/>
+  <owl:ObjectProperty rdf:ID="hasConsequence"/>
+  <owl:ObjectProperty rdf:ID="hasAntecedent"/>
+  <owl:ObjectProperty rdf:ID="hasCreditor"/>
+  <owl:ObjectProperty rdf:ID="hasState">
+    <rdfs:range rdf:resource="#GoalState"/>
+    <rdfs:domain rdf:resource="#Goal"/>
+  </owl:ObjectProperty>
+  <Goal rdf:ID="get_cart_position">
+    <hasClabel>
+      <Label rdf:ID="g6"/>
+    </hasClabel>
+    <hasFinalStates rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs2"/>
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs1"/>
+  </Goal>
+  <Goal rdf:ID="take_in_cart">
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs8"/>
+    <hasClabel>
+      <Label rdf:ID="g11"/>
+    </hasClabel>
+    <hasFinalStates rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs9"/>
+  </Goal>
+  <cs:IndividualPropertyAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs13"/>
+  <GoalState rdf:ID="active"/>
+  <Goal rdf:ID="get_cart_destination">
+    <hasFinalStates rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs3"/>
+    <hasClabel>
+      <Label rdf:ID="g7"/>
+    </hasClabel>
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs1"/>
+  </Goal>
+  <cs:IndividualPropertyAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs1"/>
+  <GoalState rdf:ID="suspended"/>
+  <GoalState rdf:ID="terminated"/>
+  <cs:IndividualPropertyAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs5"/>
+  <Goal rdf:ID="deliver_call">
+    <hasFinalStates rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs4"/>
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs2"/>
+    <hasClabel>
+      <Label rdf:ID="g8"/>
+    </hasClabel>
+  </Goal>
+  <cs:IndividualPropertyAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs9"/>
+  <Goal rdf:ID="select_nearest_AGV">
+    <hasClabel>
+      <Label rdf:ID="g9"/>
+    </hasClabel>
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs7"/>
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs4"/>
+    <hasFinalStates rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs6"/>
+    <hasFinalStates rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs5"/>
+  </Goal>
+  <Goal rdf:ID="move_to_pickup">
+    <hasClabel>
+      <Label rdf:ID="g10"/>
+    </hasClabel>
+    <hasFinalStates rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs8"/>
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs5"/>
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs2"/>
+  </Goal>
+  <cs:IndividualPropertyAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs12"/>
+  <cs:ClassAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs4"/>
+  <cs:ClassAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs16"/>
+  <cs:IndividualPropertyAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs8"/>
+  <Goal rdf:ID="take_off_cart">
+    <hasFinalStates rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs14"/>
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs11"/>
+    <hasClabel>
+      <Label rdf:ID="g5"/>
+    </hasClabel>
+  </Goal>
+  <GoalState rdf:ID="failed"/>
+  <cs:IndividualPropertyAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs11"/>
+  <cs:IndividualPropertyAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs15"/>
+  <Goal rdf:ID="transport_cart_to_destination_on_same_floor">
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs9"/>
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs10"/>
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs3"/>
+    <hasFinalStates rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs11"/>
+    <hasClabel>
+      <Label rdf:ID="g13"/>
+    </hasClabel>
+  </Goal>
+  <cs:ClassAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs3"/>
+  <cs:ClassAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs7"/>
+  <cs:IndividualPropertyAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs14"/>
+  <cs:IndividualPropertyAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs10"/>
+  <Goal rdf:ID="transport_cart_with_elevator">
+    <hasFinalStates rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs10"/>
+    <hasClabel>
+      <Label rdf:ID="g12"/>
+    </hasClabel>
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs9"/>
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs3"/>
+    <hasTriggerConditions rdf:resource="http://www.owl-ontologies.com/Ontology1535514050.owl#cs13"/>
+  </Goal>
+  <cs:ClassAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs2"/>
+  <cs:ClassAtom rdf:about="http://www.owl-ontologies.com/Ontology1512694341.owl#cs6"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.8, Build 629)  http://protege.stanford.edu -->

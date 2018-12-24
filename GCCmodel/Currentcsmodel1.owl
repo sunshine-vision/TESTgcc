@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dm="http://www.owl-ontologies.com/AGVs.owl#"
+    xmlns="http://www.owl-ontologies.com/Ontology1535514050.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlm="http://www.w3.org/2017/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/Ontology1535514050.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.w3.org/2017/11/swrl"/>
+    <owl:imports rdf:resource="http://www.owl-ontologies.com/AGVs.owl"/>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="http://www.w3.org/2017/11/swrl#Atom"/>
+  <owl:DatatypeProperty rdf:ID="type">
+    <rdfs:domain rdf:resource="http://www.w3.org/2017/11/swrl#Atom"/>
+  </owl:DatatypeProperty>
+  <swrlm:ClassAtom rdf:ID="cs6">
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agvCall"/>
+    <swrlm:classPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#Inavailable"/>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ClassAtom</type>
+  </swrlm:ClassAtom>
+  <swrlm:ClassAtom rdf:ID="cs7">
+    <swrlm:classPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#Obtained"/>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ClassAtom</type>
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1Position"/>
+  </swrlm:ClassAtom>
+  <swrlm:ClassAtom rdf:ID="cs4">
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1"/>
+    <swrlm:classPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#NearestAGV"/>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ClassAtom</type>
+  </swrlm:ClassAtom>
+  <swrlm:IndividualPropertyAtom rdf:ID="cs9">
+    <swrlm:propertyPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#hasStatus"/>
+    <swrlm:argument2 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#busy"/>
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1"/>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IndividualPropertyAtom</type>
+  </swrlm:IndividualPropertyAtom>
+  <swrlm:IndividualPropertyAtom rdf:ID="cs11">
+    <swrlm:propertyPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#samePosition"/>
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1Position"/>
+    <swrlm:argument2 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#destination1Position"/>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IndividualPropertyAtom</type>
+  </swrlm:IndividualPropertyAtom>
+  <swrlm:IndividualPropertyAtom rdf:ID="cs10">
+    <swrlm:argument2 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#destination1Floor"/>
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1Floor"/>
+    <swrlm:propertyPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#sameFloor"/>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IndividualPropertyAtom</type>
+  </swrlm:IndividualPropertyAtom>
+  <swrlm:IndividualPropertyAtom rdf:ID="cs5">
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1"/>
+    <swrlm:argument2 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#reserved"/>
+    <swrlm:propertyPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#hasStatus"/>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IndividualPropertyAtom</type>
+  </swrlm:IndividualPropertyAtom>
+  <swrlm:IndividualPropertyAtom rdf:ID="cs1">
+    <swrlm:propertyPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#locatedIn"/>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IndividualPropertyAtom</type>
+    <swrlm:argument2 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#pickup"/>
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#cart1"/>
+  </swrlm:IndividualPropertyAtom>
+  <swrlm:ClassAtom rdf:ID="cs3">
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#destination1Position"/>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ClassAtom</type>
+    <swrlm:classPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#Obtained"/>
+  </swrlm:ClassAtom>
+  <swrlm:ClassAtom rdf:ID="cs2">
+    <swrlm:classPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#Obtained"/>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ClassAtom</type>
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#pickupPosition"/>
+  </swrlm:ClassAtom>
+  <swrlm:IndividualPropertyAtom rdf:ID="cs14">
+    <swrlm:propertyPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#hasStatus"/>
+    <swrlm:argument2 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#free"/>
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1"/>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IndividualPropertyAtom</type>
+  </swrlm:IndividualPropertyAtom>
+  <swrlm:IndividualPropertyAtom rdf:ID="cs17">
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IndividualPropertyAtom</type>
+    <swrlm:propertyPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#hasStatus"/>
+    <swrlm:argument2 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#smooth"/>
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#currentPath"/>
+  </swrlm:IndividualPropertyAtom>
+  <swrlm:ClassAtom rdf:ID="cs16">
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#elevatorCall"/>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ClassAtom</type>
+    <swrlm:classPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#Available"/>
+  </swrlm:ClassAtom>
+  <swrlm:IndividualPropertyAtom rdf:ID="cs15">
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IndividualPropertyAtom</type>
+    <swrlm:propertyPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#locatedIn"/>
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1"/>
+    <swrlm:argument2 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#elevatorSensorArea"/>
+  </swrlm:IndividualPropertyAtom>
+  <swrlm:IndividualPropertyAtom rdf:ID="cs8">
+    <swrlm:propertyPredicate rdf:resource="http://www.owl-ontologies.com/AGVs.owl#samePosition"/>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IndividualPropertyAtom</type>
+    <swrlm:argument1 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#agv1Position"/>
+    <swrlm:argument2 rdf:resource="http://www.owl-ontologies.com/AGVs.owl#cart1Position"/>
+  </swrlm:IndividualPropertyAtom>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
