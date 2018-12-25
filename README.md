@@ -40,11 +40,11 @@ Goal-Capability-Commitment Ontology Model Based the Medical Waste Automated Guid
 
 **本系统涉及三个主要实验**
 
-| 实验 | 实验内容 | 包(所在位置) | 实验说明 |
-| :------: | : -----: | :------: |:------: |
-| 1 | 匹配 | experiments | 能力目标匹配(加入承诺、在线生成承诺、预先生成承诺)|
-| 2 | 目标树 | experiments | 目标树方法 |
-| 3 | 图规划 | org.wit.rpt.graphplan | 1、GraphPlanNotSimCa.java：没有添加相似度，只有能力的图规划；2、GraphPlanNotSimCaCo.java：没有添加相似度，有承诺的图规划；3、GraphPlanSimCaCo.java：有相似度和承诺的图规划；|
+实验 | 实验内容 | 包(所在位置) | 实验说明 
+---- | -------- |-----|-----
+1 | 匹配     | experiments | 能力目标匹配(加入承诺、在线生成承诺、预先生成承诺)
+2 | 目标树   | experiments | 目标树方法
+3 | 图规划   | org.wit.rpt.graphplan | 1、GraphPlanNotSimCa.java：没有添加相似度，只有能力的图规划；<br>2、GraphPlanNotSimCaCo.java：没有添加相似度，有承诺的图规划；<br>3、GraphPlanSimCaCo.java：有相似度和承诺的图规划；
 
 
 #### 四、主要算法介绍
@@ -69,6 +69,6 @@ Goal-Capability-Commitment Ontology Model Based the Medical Waste Automated Guid
 
 **欢迎大家踊跃提出自己对该推荐系统的任何想法和建议！**
 
-| 版本 | 日期 | 特性 |
-| :------: | : -----: | :------: |
-| V1.0.0 | 2018/12/24 | 测试代码上传的效果。 |
+版本 | 日期 | 特性 
+------ | ----- | ------ 
+V1.0.0 | 2018/12/24 | 测试代码上传的效果。 
