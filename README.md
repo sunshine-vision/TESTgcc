@@ -1,7 +1,7 @@
 Goal-Capability-Commitment Ontology Model Based the Medical Waste Automated Guided Vehicle Transportation–基于GCC本体模型的MWT-AGV系统
 =========================================================================================================================================================================
 
-中文文档 | [English Document](https://github.com/bluemapleman/NewsRecommendSystem/tree/master/docs/English)
+中文文档 | [English Document](https:)
 
 说明
 ---------------------------
